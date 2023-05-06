@@ -1,9 +1,51 @@
-<DOCTYPE! html>
+<!DOCTYPE html>
 <html>
 <head>
+  <title>Pyramid Example</title>
+  <style>
+    .pyramid-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .pyramid-side {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background-color: #ccc;
+      transform-style: preserve-3d;
+      transition: transform 0.5s;
+    }
+
+    .front {
+      transform: translateZ(100px);
+    }
+
+    .back {
+      transform: rotateY(180deg) translateZ(100px);
+    }
+
+    .left {
+      transform: rotateY(-90deg) translateZ(100px);
+    }
+
+    .right {
+      transform: rotateY(90deg) translateZ(100px);
+    }
+
+    .pyramid-side:hover {
+      transform: rotateX(90deg);
+    }
+  </style>
 </head>
 <body>
-<h1>Hello</h1>
-  <p>blue</p>
+  <div class="pyramid-container">
+    <div class="pyramid-side front"></div>
+    <div class="pyramid-side back"></div>
+    <div class="pyramid-side left"></div>
+    <div class="pyramid-side right"></div>
+  </div>
 </body>
 </html>
