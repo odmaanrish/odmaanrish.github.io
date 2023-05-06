@@ -1,57 +1,42 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>PYRAMID</title>
-  </head>
-  <body>
-  <div class="pyramid-container">
-  <div class="pyramid-side front"></div>
-  <div class="pyramid-side back"></div>
-  <div class="pyramid-side left"></div>
-  <div class="pyramid-side right"></div>
-</div>
-<style>
-  .pyramid-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+<DOCTYPE! html>
+  <html>
+  <head></head>
+    <body>
+    <nav>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+      <style>
+      nav {
+  background-color: #333;
+  color: #fff;
 }
 
-.pyramid-side {
-  position: absolute;
-  width: 0;
-  height: 0;
-  border: 100px solid transparent;
-  transform-origin: center;
-  transform-style: preserve-3d;
-  transition: transform 0.5s;
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.front {
-  border-bottom: 100px solid #ccc;
-  transform: translateZ(100px);
+nav li {
+  display: inline-block;
 }
 
-.back {
-  border-top: 100px solid #ccc;
-  transform: rotateY(180deg) translateZ(100px);
+nav a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #fff;
 }
 
-.left {
-  border-left: 100px solid #ccc;
-  transform: rotateY(-90deg) translateZ(100px);
+nav a:hover {
+  background-color: #555;
 }
 
-.right {
-  border-right: 100px solid #ccc;
-  transform: rotateY(90deg) translateZ(100px);
-}
-
-.pyramid-side:hover {
-  transform: rotateX(90deg);
-}
-
-</style>
-  </body>
-    </html>
+      </style>
+    </body>
+  </html>
